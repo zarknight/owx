@@ -1,0 +1,10 @@
+<!-- <open-data type="userNickName"></open-data>
+<open-data type="userGender" lang="zh_CN"></open-data>
+<open-data type="userAvatarUrl"></open-data> -->
+<view class="userinfo">
+  <image src="{{logged ? userInfo.avatarUrl : '../../assets/default-avatar.png'}}" style="width:80rpx;height:80rpx"></image>
+  <button wx:if="{{!logged}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+    授权登录
+  </button>
+  <text wx:else>{{userInfo.nickName}}</text>
+</view>
